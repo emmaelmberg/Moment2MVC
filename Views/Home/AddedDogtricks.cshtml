@@ -1,0 +1,30 @@
+@model List<Moment2MVC.Models.DogtrickModel>
+@{
+    ViewData["Title"] = "Tillagda hundtrick";
+}
+
+<h1>Lista med hundtrick</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Trick</th>
+            <th>Svårighetsgrad</th>
+            <th>Namn på hund</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var trick in Model)
+        {
+            <tr>
+                <td>@trick.DogtrickName</td>
+                <td>@trick.Difficulty</td>
+                <td>@trick.DogName.NameOption</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h2>En partial</h2>
+<partial name="~/Views/Shared/_InfoPartial.cshtml" />

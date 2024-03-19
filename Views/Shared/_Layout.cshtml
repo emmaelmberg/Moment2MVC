@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/main.css">
+    <link rel="icon" type="image/x-icon" href="~/favicon/favicon.ico">
+
+    <!-- Dynamisk titel -->
+    <title>@ViewData["Title"] | Moment 2 .NET</title>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="menu-container">
+            <nav>
+                <ul>
+                    <li><a asp-controller="Home" asp-action="Index">Start</a></li>
+                    <li><a asp-controller="Home" asp-action="AddDogtrick">Lägg till hundtrick</a></li>
+                    <li><a asp-controller="Home" asp-action="AddedDogtricks">Tillagda hundtrick</a></li>
+                    <li><a asp-controller="Home" asp-action="SetCookie">Aktivera sessionscookie</a></li>
+                    <li><a asp-controller="Home" asp-action="GetCookie">Aktuell sessionscookie</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content-container">
+            <main>
+                    @RenderBody()
+            </main>
+
+            <footer>
+                <p>Moment 2 | Emma Elmberg</p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

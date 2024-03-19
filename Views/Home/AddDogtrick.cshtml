@@ -1,0 +1,29 @@
+@model Moment2MVC.Models.DogtrickModel;
+@{
+    ViewData["Title"] = "Lägg till hundtrick";
+}
+
+<h1>Lägg till hundtrick</h1>
+<form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <label asp-for="DogtrickName"></label>
+    <span asp-validation-for="DogtrickName"></span>
+    <input asp-for="DogtrickName">
+
+    <label asp-for="Difficulty"></label>
+    <select asp-for="Difficulty">
+        <option value="Lätt">Lätt</option>
+        <option value="Medel">Medel</option>
+        <option value="Svårt">Svårt</option>
+    </select>
+
+    <label asp-for="DogName"></label>
+    @foreach (var name in Model.DogName.NameOptions)
+    {
+        <div class="radio-button-container">
+            <input type="radio" asp-for="DogName.NameOption" value="@name" id="DogName@(name)" /> @name
+        </div>
+    }
+
+    <input type="submit" value="Lägg till hundtrick">
+</form>

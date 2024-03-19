@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* För att textstorleken ska vara dynamisk anges % */
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Meny */
+.menu-container ul {
+    list-style-type: none;
+}
+
+.menu-container ul li {
+    padding-bottom: 1rem;
+}
+
+.menu-container ul li a {
+    text-decoration: none;
+    color: azure;
+    font-weight: 600;
+}
+
+.menu-container ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Rubriker och brödtext */
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    padding-top: 1.5rem;
+}
+
+p {
+    padding-top: 0.5rem;
+}
+
+p,
+.menu-container nav ul li,
+ul li,
+label,
+span,
+input[type="submit" i] {
+    font-size: 1.6rem;
+    line-height: 3rem;
+}
+
+input[type="text" i] {
+    font-size: 1.6rem;
+    padding: 0.3rem;
+}
+
+label,
+span,
+.message,
+footer {
+    font-weight: 600;
+}
+
+span {
+    color: red;
+}
+
+/* Containers */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.menu-container {
+    background-color: cadetblue;
+    height: 100vh;
+    width: 40rem;
+    padding: 5rem 6rem;
+}
+
+.content-container {
+    background-color: bisque;
+    width: 100%;
+    padding: 5rem;
+}
+
+/* Formulär */
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 40rem;
+    width: 100%;
+}
+
+label {
+    padding-top: 1rem;
+}
+
+select {
+    padding: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.radio-button-container {
+    font-size: 1.6rem;
+    padding-bottom: 0.5rem;
+}
+
+input[type="submit" i] {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    padding: 0.5rem;
+    margin-top: 2rem;
+}
+
+/* Tabell */
+table {
+    max-width: 80rem;
+    width: 100%;
+    padding-top: 2rem;
+}
+
+th {
+    font-size: 1.8rem;
+    text-align: left;
+}
+
+td {
+    font-size: 1.6rem;
+    line-height: 3rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding-top: 5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Partials */
+.info-partial {
+    background-color: burlywood;
+    border: 0.1rem solid lightblue;
+    padding: 2rem;
+    width: 30rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1000px) {
+    /* Containers */
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .menu-container {
+        height: 13rem;
+        width: 100%;
+    }
+
+    .menu-container nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .content-container {
+        height: 100vh;
+    }
+}

@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Start";
+}
+
+<h1>Startsida</h1>
+<h2>ViewData</h2>
+<p>Data skickad från controllern med ViewData:</p>
+<p class="message">@ViewData["ViewDataMessage"]</p>
+
+<h2>ViewBag</h2>
+<p>Data skickad från controllern med ViewBag:</p>
+<p class="message">@ViewBag.message</p>
+
+<h2>En partial</h2>
+<partial name="~/Views/Shared/_InfoPartial.cshtml" />
