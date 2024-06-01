@@ -41,7 +41,6 @@ public class HomeController : Controller
 
             ModelState.Clear();
 
-            // 
             return RedirectToAction("AddedDogtricks", "Home");
         }
         return View(new DogtrickModel() { DogName = new DogName()});
